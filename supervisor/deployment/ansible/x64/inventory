@@ -1,0 +1,10 @@
+[supervisor-x64-stpete1]
+192.168.2.254
+
+[supervisor-x64-stpete1:vars]
+ports_range=3000
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=wt_supervisor
+ansible_ssh_pass=wt_supervisor

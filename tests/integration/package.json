@@ -1,0 +1,27 @@
+{
+  "name": "workty-mocha-integration-unit-tests",
+  "version": "0.8.0",
+  "private": true,
+  "dependencies": {
+    "chai": "^3.3.0",
+    "lodash": "^3.10.1",
+    "log-timestamp": "^0.1.2",
+    "minimist": "^1.2.0",
+    "mongoose": "^4.1.8",
+    "promise": "^7.0.4",
+    "restify": "^4.0.3",
+    "socket.io-client": "~1.3.7"
+  },
+  "description": "Mocha integration unit tests for Workty platform",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexLevshin/workty.git"
+  },
+  "author": "Alex Levshin",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha-teamcity-reporter": "^1.0.0",
+    "superagent": "^1.4.0"
+  }
+}

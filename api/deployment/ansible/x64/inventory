@@ -1,0 +1,10 @@
+[restapi-x64-stpete1]
+192.168.2.254
+
+[restapi-x64-stpete1:vars]
+ports_range=9999
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=wt_restapi
+ansible_ssh_pass=wt_restapi

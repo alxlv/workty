@@ -1,0 +1,11 @@
+[nodes-arm7-stpete1]
+192.168.2.2
+
+
+[nodes-arm7-stpete1:vars]
+ports_range=3000-3003
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=pi
+ansible_ssh_pass=Pi
