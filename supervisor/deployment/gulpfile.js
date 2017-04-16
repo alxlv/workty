@@ -13,10 +13,14 @@ let util = require('util');
 let clean = require('gulp-clean');
 
 // Create local folder and copy folder
-gulp.task('create-src-local-folder', ['del-src-local-folder'], () => {
+gulp.task('create-src-local-folder', ['copy-dockerfile'], () => {
     let paths = config.srcLocalFoldersPaths;
-    paths.push('./dockerfiles/' + argv.arch + '/Dockerfile');
+    paths.push(destLocalFolderPath + '/Dockerfile');
     return gulp.src(paths).pipe(zip(destCompressedFileName)).pipe(gulp.dest(destLocalFolderPath));
+});
+
+gulp.task('copy-dockerfile', ['del-src-local-folder'], () => {
+    return gulp.src('./dockerfiles/' + argv.arch + '/Dockerfile').pipe(gulp.dest(destLocalFolderPath));
 });
 
 // Delete local folder

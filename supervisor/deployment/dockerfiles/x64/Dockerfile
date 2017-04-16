@@ -53,4 +53,4 @@ ADD . /opt/workty-supervisor-app
 
 # Expose 1 port
 EXPOSE 3000
-CMD node /opt/workty-supervisor-app/app.js --root_folder=/opt/workty-supervisor-app --dbname=${SUPERVISOR_DBNAME} --dbhostname=${SUPERVISOR_DBHOST}
+CMD node /opt/workty-supervisor-app/app.js --dbname=workty --dbhostname=127.0.0.1

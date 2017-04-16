@@ -16,9 +16,9 @@ var settings = {
        allowCredentials: true
    },
    supervisor: {
-       protocol: 'ws', host: '127.0.0.1', port: 3000, name: 'supervisor', email: 'supervisor@localhost', password: 'YuiDoUk74', authTimeout: 1000, hearbeatTimeout: 10000,
+       protocol: 'ws', host: '127.0.0.1', port: 3000, name: 'supervisor', email: 'supervisor@localhost', password: 'supervisor', authTimeout: 1000, hearbeatTimeout: 10000,
        getAuthorizationBasic: function() {
-           return 'Basic c3VwZXJ2aXNvckB3b3JrdHkuY29tOll1aURvVWs3NA==';
+           return 'Basic c3VwZXJ2aXNvckBsb2NhbGhvc3Q6c3VwZXJ2aXNvcg==';
        },
        getConnectionString: function() {
            return this.protocol + '://' + this.host + ':' + this.port + '/' + this.name;

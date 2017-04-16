@@ -2,7 +2,7 @@
 /**
  * Created by Alex Levshin on 06/12/16.
  * Input parameters example:
- *  create-mongo-database --rest_api_version_number=1 --version_number=1 --dbhostname=127.0.0.1 --dbname=workty_2
+ *  create-mongo-database --rest_api_version_number=1 --dbhostname=127.0.0.1 --dbname=workty
  */
 global.rootRequire = function(name) {
     return require('../../' + name);
