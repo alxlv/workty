@@ -49,7 +49,7 @@ var settings = {
        root: '/nfs/workty'
    },
    restapi: {
-       protocol: 'https', host: '127.0.0.1', port: 9999, errorLinkUrl: 'https://127.0.0.1/workty/docs/errors/api', name: 'restify api server',
+       protocol: 'https', host: '127.0.0.1', port: 9999, errorLinkUrl: 'https://127.0.0.1/workty/docs/errors/api',
        throttleConfig: { burst: 10, rate: 1000000 },
        getConnectionString: function() {
            return this.protocol + '://' + this.host + ':' + this.port;

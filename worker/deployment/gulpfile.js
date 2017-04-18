@@ -12,17 +12,15 @@ let destLocalFolderPath = argv.outputlocaldir + '/' + argv.branch_type + '/' + a
 let util = require('util');
 let clean = require('gulp-clean');
 
-// Create local folder
-gulp.task('create-src-local-folder', ['del-src-local-folder'], () => {
+// Create local folder and copy folder
+gulp.task('create-src-local-folder', ['copy-dockerfile'], () => {
     let paths = config.srcLocalFoldersPaths;
-    paths.push('./dockerfiles/' + argv.arch + '/Dockerfile');
+    paths.push(destLocalFolderPath + '/Dockerfile');
     return gulp.src(paths).pipe(zip(destCompressedFileName)).pipe(gulp.dest(destLocalFolderPath));
 });
 
-// Delete local folder
-gulp.task('del-src-local-folder',[], () => {
-    return gulp.src(destLocalFolderPath + '/*', {read: false})
-           .pipe(clean({force: true}));
+gulp.task('copy-dockerfile', ['del-src-local-folder'], () => {
+    return gulp.src('./dockerfiles/' + argv.arch + '/Dockerfile').pipe(gulp.dest(destLocalFolderPath));
 });
 
 // Default task

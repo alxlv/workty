@@ -53,5 +53,5 @@ ADD . /opt/workty-restapi-app
 
 # Expose 1 port
 EXPOSE 9999
-CMD node /opt/workty-restapi-app/api/app.js --root_folder=/opt/workty-restapi-app --major_version=1 --dbhostname=${RESTAPI_DBHOST} --dbname=${RESTAPI_DBNAME}
+CMD node /opt/workty-restapi-app/api/app.js --root_folder=/opt/workty-restapi-app --major_version=1 --dbhostname=127.0.0.1 --dbname=workty
 

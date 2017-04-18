@@ -1,5 +1,5 @@
 /**
- * Created by root on 17/2/16.
+ * Created by Alex Levshin on 2/17/16.
  */
 'use strict';
 var PREFIX = 'restapi.sv.';
