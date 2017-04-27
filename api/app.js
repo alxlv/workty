@@ -24,7 +24,7 @@ var argv = parseArgs(process.argv.slice(2));
 var mongoose = require('mongoose');
 var majorVersion = argv.major_version ? argv.major_version : 1;
 var subVersion = argv.sub_version ? argv.sub_version : '2016.10.1';
-var loggerController = require('./shared-controllers/logger-controller')();
+var loggerController = rootRequire('shared/controllers/logger-controller')();
 
 function _error(data) {
     var msg = util.inspect(data, { depth: null });

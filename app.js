@@ -25,7 +25,7 @@ var uid = require('uid2');
 var config = rootRequire('config');
 var RedisStore = require('connect-redis')(session);
 var favicon = require('serve-favicon');
-var loggerController = rootRequire('api/shared-controllers/logger-controller')();
+var loggerController = rootRequire('shared/controllers/logger-controller')();
 
 // Connect to db
 var connectionString = argv.dbhostname + '/' + argv.dbname;

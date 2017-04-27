@@ -11,7 +11,7 @@ var ApiPrefix = 'api/v' + latestVersion.major + '/';
 var db = rootRequire('database/db').getInstance(config.supervisor.name);
 var errorSupervisorController = rootRequire(ApiPrefix  + '/controllers/supervisor/error-controller')();
 var protocolClient = rootRequire('shared/protocols/v' + latestVersion.major  + '/client-sv-payments.module').OPERATIONS;
-var LoggerController = rootRequire('api/shared-controllers/logger-controller')();
+var LoggerController = rootRequire('shared/controllers/logger-controller')();
 
 var PaymentsContext = function CreatePaymentsContext(contextOwner, contextName, contextLocator) {
     var _paymentTransactions = [];

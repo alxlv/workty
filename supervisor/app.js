@@ -17,7 +17,7 @@ var DictionariesContext = require('./contexts/dictionaries');
 var protocol = rootRequire('shared/protocols/v1/restapi-sv.module').OPERATIONS;
 var socketIOAuth = require('socketio-auth');
 var socketIO = require('socket.io');
-var LoggerController = rootRequire('api/shared-controllers/logger-controller')();
+var LoggerController = rootRequire('shared/controllers/logger-controller')();
 
 // Server socket is on worker device
 // Client socket is UI express application

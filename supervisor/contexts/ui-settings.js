@@ -9,7 +9,7 @@ var util = require('util');
 var latestVersion = config.restapi.getLatestVersion();
 var db = rootRequire('database/db').getInstance(config.supervisor.name);
 var protocolClient = rootRequire('shared/protocols/v' + latestVersion.major  + '/client-sv-ui-settings.module').OPERATIONS;
-var LoggerController = rootRequire('api/shared-controllers/logger-controller')();
+var LoggerController = rootRequire('shared/controllers/logger-controller')();
 
 var UiSettingsContext = function CreateUiSettingssContext(contextOwner, contextName, contextLocator) {
     var _sockets = [];

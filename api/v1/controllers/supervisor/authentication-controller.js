@@ -11,7 +11,7 @@ var errorSupervisorController = require('./error-controller')();
 var crypto = require('crypto');
 var acl = require('acl');
 var config = rootRequire('config');
-let LoggerController = rootRequire('api/shared-controllers/logger-controller');
+let LoggerController = rootRequire('shared/controllers/logger-controller');
 let util = require('util');
 
 global.accountsAclList = global.accountsAclList ? global.accountsAclList : new acl(new acl.memoryBackend());

@@ -1,6 +1,6 @@
 'use struct';
 /**
- * Created by pimaster on 30/7/16.
+ * Created by Alex Levshin on 30/7/16.
  */
 var mongoose = require('mongoose');
 var util = require('util');
@@ -14,7 +14,6 @@ var worktySupervisorController = rootRequire(ApiPrefix  + '/controllers/supervis
 var deviceSupervisorController = rootRequire(ApiPrefix  + '/controllers/supervisor/device-controller')();
 var paymentSupervisorController = rootRequire(ApiPrefix  + '/controllers/supervisor/payment-controller')();
 var uiSettingsSupervisorController = rootRequire(ApiPrefix  + '/controllers/supervisor/ui-settings-controller')();
-var loggerController = rootRequire('api/shared-controllers/logger-controller')();
 
 var WorktyDb = (function _WorktyDb() {
     var _instance = null;

@@ -6,7 +6,7 @@ var _ = require('lodash');
 var EventEmitter = require('events').EventEmitter;
 var WorktyInstanceFsm = require('./workty-instance-fsm');
 var util = require('util');
-var LoggerController = rootRequire('api/shared-controllers/logger-controller')();
+var LoggerController = rootRequire('shared/controllers/logger-controller')();
 
 var Workflow = function (parms) {
     var _worktiesInstances = [];

@@ -23,6 +23,12 @@ gulp.task('copy-dockerfile', ['del-src-local-folder'], () => {
     return gulp.src('./dockerfiles/' + argv.arch + '/Dockerfile').pipe(gulp.dest(destLocalFolderPath));
 });
 
+// Delete local folder
+gulp.task('del-src-local-folder',[], () => {
+    return gulp.src(destLocalFolderPath + '/*', {read: false})
+        .pipe(clean({force: true}));
+});
+
 // Default task
 gulp.task('default', ['create-src-local-folder'], () => {
     process.exit(0);

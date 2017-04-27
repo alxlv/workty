@@ -13,7 +13,7 @@ var protocolWorker = rootRequire('shared/protocols/v' + latestVersion.major + '/
 var protocolClient = rootRequire('shared/protocols/v' + latestVersion.major + '/client-sv-devices.module').OPERATIONS;
 var db = rootRequire('database/db').getInstance(config.supervisor.name);
 var errorSupervisorController = rootRequire(ApiPrefix  + '/controllers/supervisor/error-controller')();
-var LoggerController = rootRequire('api/shared-controllers/logger-controller')();
+var LoggerController = rootRequire('shared/controllers/logger-controller')();
 var Q = require('q');
 
 var DevicesContext = function CreateDevicesContext(contextOwner, contextName, contextLocator) {

@@ -17,7 +17,7 @@ var util = require('util');
 var _ = require('lodash');
 var protocol = rootRequire('shared/protocols/v1/restapi-sv.module').OPERATIONS;
 var ioClient = require('socket.io-client');
-var LoggerController = require('./shared-controllers/logger-controller')();
+var LoggerController = rootRequire('shared/controllers/logger-controller')();
 
 var api = function(server, version) {
     var prefix = './v' + version.major + '/';

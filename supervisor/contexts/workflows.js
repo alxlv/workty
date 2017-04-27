@@ -13,7 +13,7 @@ var db = rootRequire('database/db').getInstance(config.supervisor.name);
 var Workflow = require('../workflow');
 var protocolClient = rootRequire('shared/protocols/v' + latestVersion.major + '/client-sv-workflows.module').OPERATIONS;
 var errorSupervisorController = rootRequire(ApiPrefix  + '/controllers/supervisor/error-controller')();
-var LoggerController = rootRequire('api/shared-controllers/logger-controller')();
+var LoggerController = rootRequire('shared/controllers/logger-controller')();
 var Q = require('q');
 
 // TODO:

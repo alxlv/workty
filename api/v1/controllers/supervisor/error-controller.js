@@ -7,7 +7,7 @@ var argv = parseArgs(process.argv.slice(2));
 var restify = require('restify');
 var config = rootRequire('config');
 var util = require('util');
-var loggerController = rootRequire('api/shared-controllers/logger-controller')();
+var loggerController = rootRequire('shared/controllers/logger-controller')();
 var UnexpectedError = require('../../errors/unexpected-error');
 var majorVersion = argv.major_version || config.restapi.getLatestVersion().major;
 

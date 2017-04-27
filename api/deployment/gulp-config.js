@@ -4,6 +4,7 @@
 var settings = {
     srcLocalFoldersPaths: [
         '../../config.js',
+        '../../passport-auth.config.js',
 		'../../shared{,/**}',
         '../../api/**',
 		'!../../api/deployment{,/**}'

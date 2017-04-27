@@ -9,12 +9,12 @@ if (!global.rootRequire) {
     };
 }
 
-var PROTOCOL_SUBFOLDER_PATH = 'protocols/v1/worker-sv.module';
+var PROTOCOL_SUBFOLDER_PATH = 'shared/protocols/v1/worker-sv.module';
 
 require('log-timestamp');
 var parseArgs = require('minimist');
 var argv = parseArgs(process.argv.slice(2));
-var loggerController = rootRequire('shared-controllers/logger-controller')();
+var loggerController = rootRequire('shared/controllers/logger-controller')();
 var protocol;
 if (argv.shared_folder_path) {
     protocol = require(argv.shared_folder_path + '/' + PROTOCOL_SUBFOLDER_PATH).OPERATIONS;
