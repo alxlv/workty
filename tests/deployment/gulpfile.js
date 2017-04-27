@@ -13,14 +13,14 @@ let util = require('util');
 let clean = require('gulp-clean');
 
 // Create local folder and copy files
-gulp.task('create-src-local-folder', ['del-src-local-folder'], () => {
+gulp.task('create-src-local-folder', ['copy-workties-repository'], () => {
     let paths = config.srcLocalFoldersPaths;
     paths.push('../../supervisor/workties-repository{,/**}');
     return gulp.src(paths).pipe(zip(destCompressedFileName)).pipe(gulp.dest(destLocalFolderPath));
 });
 
 // Copy workties repository
-gulp.task('copy-workties-repository', [], () => {
+gulp.task('copy-workties-repository', ['del-src-local-folder'], () => {
    return gulp.src('../../supervisor/workties-repository{,/**}').pipe(gulp.dest(destLocalFolderPath + '/supervisor'));
 });
 
