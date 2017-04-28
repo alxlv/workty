@@ -7,12 +7,37 @@ The first thoughts about the platform came to me when working with Raspberry PI,
 Read more information on project's **[Wiki](https://github.com/AlexLevshin/workty/wiki)** pages.
 
 # Getting started
-Before you begin, you need to complete the following steps:
-1. **[Install database](https://github.com/AlexLevshin/workty/wiki/1.-Database)**
-2. **[Install Supervisor server](https://github.com/AlexLevshin/workty/wiki/2.-Supervisor-server)**<br>
-  2.1. **[Install workies repository into database](https://github.com/AlexLevshin/workty/wiki/2.-Supervisor-server#workties-repository)**
-3. **[Install Rest API server](https://github.com/AlexLevshin/workty/wiki/3.-Rest-API-server)**
-4. **[Install workers](https://github.com/AlexLevshin/workty/wiki/5.-Worker)**
+Before you begin, you need to complete the following steps.
+
+* Database<br>
+
+Use docker image:
+``` 
+docker pull alexlevshin/workty-mongodb-3.0.6-amd64
+```
+and read **[Database](https://github.com/AlexLevshin/workty/wiki/1.-Database)** section
+
+* Supervisor server<br>
+
+Use docker image:
+```
+docker pull alexlevshin/workty-supervisor-amd64
+```
+and read **[Supervisor server](https://github.com/AlexLevshin/workty/wiki/2.-Supervisor-server)** section
+
+* Rest API server<br>
+
+Use docker image:
+```
+docker pull alexlevshin/workty-restapi-amd64
+```
+and read **[Rest API server](https://github.com/AlexLevshin/workty/wiki/3.-Rest-API-server)** section
+
+* Worker
+Use docker image:
+```
+```
+and read **[Worker](https://github.com/AlexLevshin/workty/wiki/5.-Worker)** section
 
 # Rest API examples
 ### Create and run simple workflow
