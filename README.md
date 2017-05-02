@@ -36,6 +36,7 @@ and read **[Rest API server](https://github.com/AlexLevshin/workty/wiki/3.-Rest-
 * Worker
 Use docker image:
 ```
+docker pull alexlevshin/workty-worker-arm7
 ```
 and read **[Worker](https://github.com/AlexLevshin/workty/wiki/5.-Worker)** section
 
