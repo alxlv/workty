@@ -13,7 +13,7 @@ var argv = parseArgs(process.argv.slice(2));
 var WORKTY_SHARED_FOLDER_PATH = argv.nfs_path || '/mnt/workty';
 var BINARY_EXEC_PATH = argv.binary_exec_path || '/usr/local/bin/node';
 var util = require('util');
-var loggerController = rootRequire('shared-controllers/logger-controller')();
+var loggerController = rootRequire('shared/controllers/logger-controller')();
 var os = require('os');
 
 function _error(data) {
